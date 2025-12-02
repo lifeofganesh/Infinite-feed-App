@@ -39,14 +39,11 @@ const postsSlice = createSlice({
       .addCase(loadPosts.fulfilled, (state, action) => {
         state.status = "succeeded";
         const newPosts = action.payload.posts;
-        // Avoid duplicates if any (basic check by id)
         const existingIds = new Set(state.items.map((p) => p.id));
         newPosts.forEach((p) => {
           if (!existingIds.has(p.id)) state.items.push(p);
         });
-        // update page for next fetch
         state.page = action.payload.page + 1;
-        // determine hasMore using total returned by service
         const fetchedCount = state.items.length;
         state.hasMore = fetchedCount < action.payload.total;
       })
