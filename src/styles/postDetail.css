@@ -1,0 +1,42 @@
+.post-detail-container {
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 22px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #0b6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  background:orange;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.post-title {
+  font-size: 22px;
+  margin: 8px 0 12px;
+}
+
+.post-body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
